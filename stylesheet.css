@@ -35,7 +35,9 @@ li {
   background-position: center;
 
 }
-#seven{
+#seven:hover{
+  background-color: black;
+  color:white;
 }
 #eight:hover{
   background-color: black;
@@ -57,7 +59,18 @@ li {
 }
 #twelve:hover{
   background-color: black;
-  color:white;
+}
+
+#twelve ol {
+  list-style: none;
+  color: white;
+  position: center;
+  display: inline;
+}
+
+#twelve ol li{
+border: none;
+
 }
 
 #one:hover a {
