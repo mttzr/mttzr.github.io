@@ -20,7 +20,10 @@ li {
   background-image: url('twitter.jpg');
   background-position: center;
 }
-#four{}
+#four:hover{
+  background-color: black;
+  color:white;
+}
 #five:hover{
   background-image: url('helpouts.png');
   background-repeat: no-repeat;
@@ -32,20 +35,30 @@ li {
   background-position: center;
 
 }
-#seven{}
-#eight:hover{
-  background-image: url('instagram.jpg');
-  background-position: center;
-
+#seven{
 }
-#nine{}
+#eight:hover{
+  background-color: black;
+  color:white;
+}
+
+#nine:hover{
+  background-color: black;
+  color:white;
+}
+
 #ten:hover{
   background-image: url('facebook.jpg');
   background-position: center;
 }
-#eleven{}
-#twelve{}
-
+#eleven:hover{
+  background-image: url('instagram.jpg');
+  background-position: center;
+}
+#twelve:hover{
+  background-color: black;
+  color:white;
+}
 
 #one:hover a {
 color:transparent;
