@@ -1,0 +1,87 @@
+#intro {
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
+}
+
+li {
+  text-align: center;
+  padding: 5px;
+}
+
+#one:hover {
+  background-color: black;
+}
+#two:hover{
+  background-image: url('face.jpg');
+  background-size: 105%;
+  background-position: center;
+
+}
+#three:hover{
+  background-image: url('twitter.jpg');
+  background-position: center;
+}
+#four{}
+#five:hover{
+  background-image: url('helpouts.png');
+  background-repeat: no-repeat;
+  background-position:center;
+  
+}
+#six:hover{
+  background-image: url('linkedin.jpg');
+  background-position: center;
+
+}
+#seven{}
+#eight:hover{
+  background-image: url('instagram.jpg');
+  background-position: center;
+
+}
+#nine{}
+#ten:hover{
+  background-image: url('facebook.jpg');
+  background-position: center;
+}
+#eleven{}
+#twelve{}
+
+
+#one:hover a {
+color:transparent;
+}
+#two:hover a {
+color:transparent;
+}
+#three:hover a {
+color:transparent;
+}
+#four:hover a {
+color:transparent;
+}
+#five:hover a {
+color:transparent;
+}
+#six:hover a {
+color:transparent;
+}
+#seven:hover a {
+color:transparent;
+}
+#eight:hover a {
+color:transparent;
+}
+#nine:hover a {
+color:transparent;
+}
+#ten:hover a {
+color:transparent;
+}
+#eleven:hover a {
+color:transparent;
+}
+#twelve:hover a {
+color:transparent;
+}
+
+
