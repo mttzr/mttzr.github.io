@@ -11,7 +11,7 @@ li {
   background-color: black;
 }
 #two:hover{
-  background-image: url('face.jpg');
+  background-image: url('Face.jpg');
   background-size: 105%;
   background-position: center;
 
@@ -25,7 +25,7 @@ li {
   color:white;
 }
 #five:hover{
-  background-image: url('helpouts.png');
+  background-image: url('Helpouts.png');
   background-repeat: no-repeat;
   background-position:center;
   
