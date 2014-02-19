@@ -2,6 +2,10 @@
   font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
 }
 
+a { color: #000000;
+
+}
+
 li {
   text-align: center;
   padding: 5px;
