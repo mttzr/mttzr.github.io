@@ -56,8 +56,9 @@ li {
 }
 
 #nine:hover{
-  background-color: black;
-  color:white;
+  background-image: url("images/GitHub-Mark-120px-plus.png");
+  background-repeat:no-repeat;
+  background-position:center;
 }
 
 #ten:hover{
