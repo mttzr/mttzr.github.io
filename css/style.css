@@ -179,6 +179,12 @@ Change widths as necessary
     font-size: 2em;
   }
 
+  #nav_icons img{
+  margin-right: 5px;
+  margin-left:5px;
+
+  }
+
   /* COLUMN GRID */
   .g1,.g2,.g3 {display:inline; float: left}
   
