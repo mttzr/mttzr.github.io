@@ -6,6 +6,13 @@
 	Base stylesheet with CSS normalization, typographic baseline grid and progressive responsiveness
 */
 
+#name{
+  text-align:center; 
+  font-family:'Abel'; 
+  font-size:4em; 
+  color: white; 
+  padding-top: 100px;"
+}
 
 
 #nav_icons img{
@@ -176,8 +183,7 @@ Change widths as necessary
 	}
 
   #name {
-    font-size: 16pt;
-    color:red;
+    font-size: 24pt;
   }
 
   #nav_icons img{
