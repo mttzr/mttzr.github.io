@@ -170,7 +170,7 @@ Change widths as necessary
 ------------------------------------------- */
 
 /* MOBILE PORTRAIT */
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 450px) {
 	body {
 		
 	}
