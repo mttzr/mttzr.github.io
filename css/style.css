@@ -175,6 +175,10 @@ Change widths as necessary
 		
 	}
 
+  #name{
+    font-size: 2em;
+  }
+
   /* COLUMN GRID */
   .g1,.g2,.g3 {display:inline; float: left}
   
@@ -183,7 +187,7 @@ Change widths as necessary
   .g2 {width:48.0%}
   .g3 {width:98.0%}
 
-  
+
 }
 
 /* MOBILE LANDSCAPE */
