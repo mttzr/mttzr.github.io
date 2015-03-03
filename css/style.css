@@ -1042,7 +1042,7 @@
 		background-size: cover;
 		content: '';
 		display: block;
-		height: 15em;
+		height: 0em; /* was 15em*/
 		width: 100%;
 	}
 

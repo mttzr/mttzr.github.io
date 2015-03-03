@@ -90,7 +90,7 @@
 /* One */
 
 	#one:before {
-		height: 7em;
+		height: 0em; /*was 7em*/
 	}
 
 /* Footer */

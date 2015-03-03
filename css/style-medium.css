@@ -48,7 +48,7 @@
 /* One */
 
 	#one:before {
-		height: 10em;
+		height: 0em; /*was 10em*/
 	}
 
 /* Layers */
