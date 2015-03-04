@@ -53,5 +53,5 @@
 	input[type="reset"],
 	input[type="button"],
 	.button {
-		padding: 0;
+		padding: 2; /* was 0 */
 	}
