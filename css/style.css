@@ -843,6 +843,8 @@
 		.button.special {
 			background-color: #F6A200;
 			color: #ffffff !important;
+			margin-bottom: 1em;
+
 		}
 
 			input[type="submit"].special:hover,
