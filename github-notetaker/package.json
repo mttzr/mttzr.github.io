@@ -10,7 +10,12 @@
     "react-router": "^1.0.2",
     "reactfire": "^0.5.1",
     "firebase": "^2.3.2",
-    "axios": "^0.8.1"
+    "axios": "^0.8.1",
+    "ejs":"^2.3.1",
+    "express":"~4.9.x"
+  },
+  "engines":{
+    "node":"0.12.2"
   },
   "devDependencies": {
     "webpack": "^1.12.9",
