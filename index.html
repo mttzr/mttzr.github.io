@@ -1,26 +1,19 @@
  <!DOCTYPE html>
   <html>
-
     <head>
       <!--Import Google Icon Font-->
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <!--Import materialize.css-->
       <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
-
     <body>
       <nav>
         <div class="nav-wrapper light-blue darken-2">
-          <a href="#" class="brand-logo">
-          </a>
-        
-          </ul>
+          <a href="#" class="brand-logo"></a>
         </div>
       </nav>
-
       <div class="container">
         <div class="row">
           <div class="col s12 m6">
@@ -40,83 +33,101 @@
                 <span class="card-title activator grey-text text-darken-4">About the author<i class="material-icons right">expand_less</i></span>
               </div>
               <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4">About the author<i class="material-icons right">close</i></span><p>Former Googler out and about in the real world making new friends and building neat things. Currently trying to move people with this handy <a href="http://www.uber.com">app</a>.</p>
+                <span class="card-title grey-text text-darken-4">About the author<i class="material-icons right">close</i></span>
+                <p>Former Googler out and about in the real world making new friends and building neat things. Currently trying to move people with this handy
+                <a href="http://www.uber.com">app</a>.</p>
               </div>
             </div>
           </div>     
         </div>
-
-      
-
         <div class="col s12 m12">
-            <div class="card white">
-              <div class="card-content white-text">
-                <span class="card-title grey-text text-darken-4">My Sandbox</span> 
-                <p class= "grey-text text-darken-4">Disclaimer: Not everything works and everything that does work doesn't necessarily work in the right way. Have fun.</p>
-              </div>
+          <div class="card white">
+            <div class="card-content white-text">
+              <span class="card-title grey-text text-darken-4">My Sandbox</span> 
+              <p class= "grey-text text-darken-4">Disclaimer: Not everything works and everything that does work doesn't necessarily work in the right way. Have fun.</p>
             </div>
           </div>
-          <div class = "col s12 m12">
-            <ul class="collapsible hoverable" data-collapsible="accordion">
-              <li>
-                <div class="collapsible-header"><i class="material-icons">filter_drama</i>GitHub Notes in React</div>
-                <div class="collapsible-body"><p>A react app that uses the github users api to query for users and display thir profile information. Text notes can be stored on a firebase DB. Hosted on Heroku.<br><br>
-                <a href="https://powerful-dusk-4074.herokuapp.com/" class="waves-effect waves-light btn" style="margin-right: 12px;">Try&nbsp;now</a><br><br>
-                 Tutorial <a href="https://egghead.io/lessons/react-building-a-react-js-app-notetaker-introduction">here</a>.</p></div>
+        </div>
+        <div class = "col s12 m12">
+          <ul class="collapsible hoverable" data-collapsible="accordion">
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">filter_drama</i>GitHub Notes in React
+              </div>
+              <div class="collapsible-body">
+                <p>A react app that uses the github users api to query for users and display thir profile information. Text notes can be stored on a firebase DB. Hosted on Heroku.
+                <br><br>
+                <a href="https://powerful-dusk-4074.herokuapp.com/" class="waves-effect waves-light btn" style="margin-right: 12px;">Try&nbsp;now</a>
+                <br><br>
+                Tutorial <a href="https://egghead.io/lessons/react-building-a-react-js-app-notetaker-introduction">here</a>.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">adjust</i>Simple Node.js App + Postgresql DB
+              </div>
+              <div class="collapsible-body">
+                <p>My first time launching a node.js app on Heroku. Try navigating to "/db" to see my test DB or "/cool" to see a surprise.
+                <br><br>
+                <a href="https://still-taiga-9810.herokuapp.com/" class="waves-effect waves-light btn" style="margin-right: 12px;">Try&nbsp;now</a>
+                <br><br>
+                Tutorial <a href="://devcenter.heroku.com/articles/getting-started-with-nodejs">here</a>.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">accessibility</i>23andMe API
+              </div>
+              <div class="collapsible-body">
+                <p>Coming soon!</p>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">place</i>Uber External API
+              </div>
+              <div class="collapsible-body">
+                <p>Coming soon!</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div id="modal1" class="modal bottom-sheet" style="z-index: 1003; display: block; opacity: 0; bottom: -100%;">
+          <div class="modal-content">
+            <ul class="collection">
+              <li class="collection-item avatar"><a target="_blank" href="mailto:hello@mttzr.com">
+                <i class="material-icons circle green">email</i>
+                <h5>Email</h5>
+              </a>
               </li>
-              <li>
-                <div class="collapsible-header"><i class="material-icons">adjust</i>Simple Node.js App + Postgresql DB</div>
-                <div class="collapsible-body"><p>My first time launching a node.js app on Heroku. Try navigating to "/db" to see my test DB or "/cool" to see a surprise.<br><br>
-                <a href="https://still-taiga-9810.herokuapp.com/" class="waves-effect waves-light btn" style="margin-right: 12px;">Try&nbsp;now</a><br><br>
-                 Tutorial <a href="://devcenter.heroku.com/articles/getting-started-with-nodejs">here</a>.</p></div>
-              </li>
-
-              <li>
-                <div class="collapsible-header"><i class="material-icons">accessibility</i>23andMe API</div>
-                <div class="collapsible-body"><p>Coming soon!</p>
-              </li>
-
-<!--
-              <li>
-                <div class="collapsible-header"><i class="material-icons">filter_drama</i>Weather App</div>
-                <div class="collapsible-body"><p>Built using JQuery Mobile and AJAX.<br><br>
-                <a href="www.google.com" class="waves-effect waves-light btn" style="margin-right: 12px;">Try&nbsp;now</a><br><br>
-                 Tutorial <a href="https://teamtreehouse.com/library/build-a-mobile-web-app-using-jquery-mobile-ajax-part-1">here</a>.</p></div>
-              </li>
-             
-              <li>
-                <div class="collapsible-header"><i class="material-icons">adjust</i>React App</div>
-                <div class="collapsible-body"><p>React has become a very popular framework at my current company and though I don't use react on a daily basis I wanted to build a simple test app to understand the fundamentals. This is my attempt at a simple web app for posting and viewing comments.<br><br>
-                <a href="www.google.com" class="waves-effect waves-light btn" style="margin-right: 12px;">Try&nbsp;now</a><br><br>
-                 Tutorial <a href="https://facebook.github.io/react/docs/tutorial.html">here</a>.</p></div>
-              </li>
--->
-              <li>
-                <div class="collapsible-header"><i class="material-icons">place</i>Uber External API</div>
-                <div class="collapsible-body"><p>Coming soon!</p></div>
+              <li class="collection-item avatar"><a target="_blank" href="https://www.linkedin.com/in/mattzehnder">
+                <i class="material-icons circle blue">people_outline</i>
+                <h5>Linkedin</5>
+                </a>
               </li>
             </ul>
           </div>
-
+        </div>
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
       <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script> $(document).ready(function(){ 
+        $('.modal-trigger').leanModal();
+        });
+      </script>
     </body>
-
     <footer class="page-footer light-blue darken-2">
-          <div class="container">
-            <div class="row">
-              <div class="col s12 center-align">
-                <a href="#modal1" class="waves-effect waves-light btn">Contact&nbsp;Me</a>
-              </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col s12 center-align">
+            <a href="#modal1" class="modal-trigger modal-close waves-ripple waves-light btn">Contact&nbsp;Me</a>
           </div>
-          <div class="footer-copyright">
-            <div class="container center-align">
-           &#169; 2015 Matthew Zehnder
-            </div>
-          </div>
-    </footer>
-          
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container center-align">
+          &#169; 2015 Matthew Zehnder
+        </div>
+      </div>
+    </footer>      
   </html>
         
