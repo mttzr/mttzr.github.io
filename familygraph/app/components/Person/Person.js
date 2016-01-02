@@ -1,39 +1,33 @@
 var React = require('react');
-//var PersonData = require('./PersonData');
-
-/*
-var Person = React.createClass({
-	render: function(){
-		console.log('Person Data:', this.props.person)
-		return(
-			<div> 
-			<h3>Person Data</h3>
-			Notes for ID: {this.props.username}
-			<PersonData person={this.props.person} />
-			<br />
-			</div>
-		)
-	}
-})
-
-*/
+var PersonData = require('./PersonData');
+var AddNote = require('./AddNote');
 
 
 var Person = React.createClass({
-	render: function(){
-		console.log("Person Details:", this.props.person)
-	
+	propTypes: {
+		username: React.PropTypes.string.isRequired,
+		person: React.PropTypes.array.isRequired,
+		addNote: React.PropTypes.func.isRequired,
+	},
+	render: function(){	
 	return(
-		<div>
-		<h3>Person Data</h3>
-		Username: {this.props.username}
-		<br />
-		First Name: {this.props.person.firstname}
+	<div className = "container">	
+		<div className = "row">
+			<div className = "col s12 m12">
+				<div className = "card white">
+					<div className = "card-content grey-text text-darken-4">
+					<span className="card-title">Data for {this.props.username}</span>
+					<PersonData person={this.props.person} />
+					</div>
+				</div>
+			</div>
 		</div>
+		<AddNote username={this.props.username} addNote={this.props.addNote} />
+	</div>	
 		)
 	}
-
 
 });
 
 module.exports = Person;
+

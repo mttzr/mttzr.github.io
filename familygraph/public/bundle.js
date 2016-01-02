@@ -24113,6 +24113,7 @@
 	var Home = __webpack_require__(210);
 	var Router = __webpack_require__(159);
 	var Profile = __webpack_require__(211);
+	var Graph = __webpack_require__(218);
 	var Route = Router.Route;
 	var IndexRoute = Router.IndexRoute;
 
@@ -24120,6 +24121,7 @@
 		Route,
 		{ path: '/', component: Main },
 		React.createElement(Route, { path: 'profile/:username', component: Profile }),
+		React.createElement(Route, { path: 'graph', component: Graph }),
 		React.createElement(IndexRoute, { component: Home })
 	);
 
@@ -24127,128 +24129,54 @@
 /* 209 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	var React = __webpack_require__(1);
+	var Search = __webpack_require__(217);
 
 	var Main = React.createClass({
-	  displayName: "Main",
+	  displayName: 'Main',
 
 	  render: function render() {
 	    return React.createElement(
-	      "div",
+	      'div',
 	      null,
 	      React.createElement(
-	        "nav",
+	        'nav',
 	        null,
 	        React.createElement(
-	          "div",
-	          { className: "nav-wrapper light-blue darken-2" },
+	          'div',
+	          { className: 'nav-wrapper light-blue darken-2' },
 	          React.createElement(
-	            "a",
-	            { href: "#", className: "brand-logo right hide-on-med-and-down", styles: "margin-right:10px;" },
-	            "Family Graph Editor"
+	            'a',
+	            { href: '#', className: 'brand-logo right hide-on-med-and-down', styles: 'margin-right:10px;' },
+	            'Family Graph Editor'
 	          ),
-	          React.createElement(
-	            "form",
-	            null,
-	            React.createElement(
-	              "div",
-	              { className: "input-field" },
-	              React.createElement("input", { id: "search", type: "search", placeholder: "Search for family member", required: true }),
-	              React.createElement(
-	                "label",
-	                { "for": "search" },
-	                React.createElement(
-	                  "i",
-	                  { className: "material-icons" },
-	                  "search"
-	                )
-	              ),
-	              React.createElement(
-	                "i",
-	                { className: "material-icons" },
-	                "close"
-	              )
-	            )
-	          )
+	          React.createElement(Search, null)
 	        )
 	      ),
-	      this.props.children,
-	      React.createElement(
-	        "div",
-	        { className: "fixed-action-btn", styles: "bottom: 45px; right: 24px;" },
-	        React.createElement(
-	          "a",
-	          { className: "btn-floating btn-large red" },
-	          React.createElement(
-	            "i",
-	            { className: "large material-icons" },
-	            "add"
-	          )
-	        ),
-	        React.createElement(
-	          "ul",
-	          null,
-	          React.createElement(
-	            "li",
-	            null,
-	            React.createElement(
-	              "a",
-	              { className: "btn-floating red" },
-	              React.createElement(
-	                "i",
-	                { className: "material-icons" },
-	                "insert_chart"
-	              )
-	            )
-	          ),
-	          React.createElement(
-	            "li",
-	            null,
-	            React.createElement(
-	              "a",
-	              { className: "btn-floating yellow darken-1" },
-	              React.createElement(
-	                "i",
-	                { className: "material-icons" },
-	                "format_quote"
-	              )
-	            )
-	          ),
-	          React.createElement(
-	            "li",
-	            null,
-	            React.createElement(
-	              "a",
-	              { className: "btn-floating green" },
-	              React.createElement(
-	                "i",
-	                { className: "material-icons" },
-	                "publish"
-	              )
-	            )
-	          ),
-	          React.createElement(
-	            "li",
-	            null,
-	            React.createElement(
-	              "a",
-	              { className: "btn-floating blue" },
-	              React.createElement(
-	                "i",
-	                { className: "material-icons" },
-	                "attach_file"
-	              )
-	            )
-	          )
-	        )
-	      )
+	      this.props.children
 	    );
 	  }
 	});
 
 	module.exports = Main;
+
+	/*
+
+	          <div className="fixed-action-btn" styles="bottom: 45px; right: 24px;">
+	            <a className="btn-floating btn-large red">
+	                <i className="large material-icons">add</i>
+	            </a>
+	            <ul>
+	                <li><a className="btn-floating red"><i className="material-icons">insert_chart</i></a></li>
+	                <li><a className="btn-floating yellow darken-1"><i className="material-icons">format_quote</i></a></li>
+	                <li><a className="btn-floating green"><i className="material-icons">publish</i></a></li>
+	                <li><a className="btn-floating blue"><i className="material-icons">attach_file</i></a></li>
+	            </ul>
+	          </div>     
+
+	*/
 
 /***/ },
 /* 210 */
@@ -24307,8 +24235,9 @@
 	var React = __webpack_require__(1);
 	var Router = __webpack_require__(159);
 	var Person = __webpack_require__(212);
-	var ReactFireMixin = __webpack_require__(213);
-	var Firebase = __webpack_require__(214);
+	// var helpers = require('../utils/helpers');
+	var ReactFireMixin = __webpack_require__(214);
+	var Firebase = __webpack_require__(215);
 
 	var Profile = React.createClass({
 	  displayName: 'Profile',
@@ -24317,119 +24246,99 @@
 
 	  getInitialState: function getInitialState() {
 	    return {
-	      person: {
-	        name: 'Bob',
-	        firstName: "FIRST",
-	        lastName: 'LAST',
-	        id: 'ID',
-	        profilePic: 'www.google.com',
-	        edgesTo: []
-	      }
+	      person: [1, 2, 3]
 	    };
 	  },
 
 	  componentDidMount: function componentDidMount() {
 	    this.ref = new Firebase('https://family-graph.firebaseio.com/');
+	    console.log(this.props.params.username);
 	    var childRef = this.ref.child(this.props.params.username);
 	    this.bindAsArray(childRef, 'person');
+
+	    //helpers.getUserInfo(this.props.params.username).then(function(data){
+	    //this.setState({
+	    // photo: data.photo,
+	    // detailTwo: data.detailTwo
+	    //})
+
+	    //}.bind(this))
 	  },
 
 	  componentWillUnmount: function componentWillUnmount() {
 	    this.unbind('person');
 	  },
 
+	  handleAddNote: function handleAddNote(newNote) {
+	    // update firebase, with newNote
+	    this.ref.child(this.props.params.username).child(this.state.person.length).set(newNote);
+	  },
+
 	  render: function render() {
 
-	    return React.createElement(
-	      'div',
-	      { className: 'container' },
-	      React.createElement(
-	        'div',
-	        { className: 'row' },
-	        React.createElement(
-	          'div',
-	          { className: 'col s12 m12' },
-	          React.createElement(
-	            'div',
-	            { className: 'card' },
-	            React.createElement(
-	              'div',
-	              { className: 'card-image' },
-	              React.createElement('img', { src: 'images/sample-1.jpg' }),
-	              React.createElement(
-	                'span',
-	                { className: 'card-title' },
-	                this.props.params.username
-	              )
-	            ),
-	            React.createElement(
-	              'div',
-	              { className: 'card-content' },
-	              React.createElement(Person, { username: this.props.params.username, person: this.state.person })
-	            ),
-	            React.createElement(
-	              'div',
-	              { className: 'card-action' },
-	              React.createElement(
-	                'a',
-	                { href: '#' },
-	                'This is a link'
-	              )
-	            )
-	          )
-	        )
-	      )
-	    );
+	    return React.createElement(Person, {
+	      username: this.props.params.username,
+	      person: this.state.person,
+	      addNote: this.handleAddNote });
 	  }
 	});
 
 	module.exports = Profile;
 
+	/*
+
+	            <div className="card-image">
+	             <img src="images/sample-1.jpg"/>
+	              <span className="card-title">
+	                 </span>
+	*/
+
 /***/ },
 /* 212 */
 /***/ function(module, exports, __webpack_require__) {
 
-	"use strict";
+	'use strict';
 
 	var React = __webpack_require__(1);
-	//var PersonData = require('./PersonData');
-
-	/*
-	var Person = React.createClass({
-		render: function(){
-			console.log('Person Data:', this.props.person)
-			return(
-				<div> 
-				<h3>Person Data</h3>
-				Notes for ID: {this.props.username}
-				<PersonData person={this.props.person} />
-				<br />
-				</div>
-			)
-		}
-	})
-
-	*/
+	var PersonData = __webpack_require__(213);
+	var AddNote = __webpack_require__(216);
 
 	var Person = React.createClass({
-		displayName: "Person",
+		displayName: 'Person',
 
+		propTypes: {
+			username: React.PropTypes.string.isRequired,
+			person: React.PropTypes.array.isRequired,
+			addNote: React.PropTypes.func.isRequired
+		},
 		render: function render() {
-			console.log("Person Details:", this.props.person);
-
 			return React.createElement(
-				"div",
-				null,
+				'div',
+				{ className: 'container' },
 				React.createElement(
-					"h3",
-					null,
-					"Person Data"
+					'div',
+					{ className: 'row' },
+					React.createElement(
+						'div',
+						{ className: 'col s12 m12' },
+						React.createElement(
+							'div',
+							{ className: 'card white' },
+							React.createElement(
+								'div',
+								{ className: 'card-content grey-text text-darken-4' },
+								React.createElement(
+									'span',
+									{ className: 'card-title' },
+									'Data for ',
+									this.props.username
+								),
+								React.createElement(PersonData, { person: this.props.person })
+							)
+						)
+					)
 				),
-				"Username: ",
-				this.props.username,
-				React.createElement("br", null),
-				"First Name: ",
-				this.props.person.firstname
+				React.createElement(AddNote, { username: this.props.username, addNote: this.props.addNote })
 			);
 		}
 
@@ -24439,6 +24348,36 @@
 
 /***/ },
 /* 213 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+
+	var PersonData = React.createClass({
+		displayName: 'PersonData',
+
+		render: function render() {
+			var person = this.props.person.map(function (data, index) {
+				return React.createElement(
+					'li',
+					{ key: index },
+					data['.value']
+				);
+			});
+			return React.createElement(
+				'ul',
+				null,
+				person
+			);
+		}
+
+	});
+
+	module.exports = PersonData;
+
+/***/ },
+/* 214 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -24809,7 +24748,7 @@
 
 
 /***/ },
-/* 214 */
+/* 215 */
 /***/ function(module, exports) {
 
 	/*! @license Firebase v2.3.2
@@ -25081,6 +25020,181 @@
 
 	module.exports = Firebase;
 
+
+/***/ },
+/* 216 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+
+	var AddNote = React.createClass({
+		displayName: 'AddNote',
+
+		propTypes: {
+			username: React.PropTypes.string.isRequired,
+			addNote: React.PropTypes.func.isRequired
+		},
+
+		setRef: function setRef(ref) {
+
+			this.note = ref;
+		},
+
+		handleSubmit: function handleSubmit() {
+
+			var newNote = this.note.value;
+			this.note.value = '';
+			this.props.addNote(newNote);
+		},
+		render: function render() {
+
+			var divStyle = {
+
+				height: '200px'
+
+			};
+
+			return React.createElement(
+				'div',
+				{ className: 'row' },
+				React.createElement(
+					'div',
+					{ className: 'col s12 m12' },
+					React.createElement(
+						'div',
+						{ className: 'card white', style: divStyle },
+						React.createElement(
+							'div',
+							{ className: 'card-content grey-text text-darken-4' },
+							React.createElement(
+								'span',
+								{ className: 'card-title' },
+								'Add a note'
+							),
+							React.createElement(
+								'div',
+								{ className: 'input-field col s12' },
+								React.createElement('input', { placeholder: 'Note here', id: 'add_note', type: 'text', className: 'validate', ref: this.setRef }),
+								React.createElement(
+									'label',
+									{ 'for': 'add_note' },
+									'Add Note'
+								),
+								React.createElement(
+									'a',
+									{ className: 'waves-effect waves-light btn', onClick: this.handleSubmit },
+									'submit'
+								)
+							)
+						)
+					)
+				)
+			);
+		}
+
+	});
+
+	module.exports = AddNote;
+
+/***/ },
+/* 217 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var Router = __webpack_require__(159);
+
+	var Search = React.createClass({
+		displayName: 'Search',
+
+		mixins: [Router.History],
+
+		getRef: function getRef(ref) {
+			this.usernameRef = ref;
+		},
+
+		handleSubmit: function handleSubmit() {
+
+			var username = this.usernameRef.value;
+			this.usernameRef.value = '';
+			this.history.pushState(null, "profile/" + username);
+		},
+
+		render: function render() {
+
+			return React.createElement(
+				'div',
+				{ className: 'col-sm-12' },
+				React.createElement(
+					'form',
+					{ onSubmit: this.handleSubmit },
+					React.createElement(
+						'div',
+						{ className: 'input-field' },
+						React.createElement('input', { id: 'search', type: 'search', placeholder: 'Search for family member', ref: this.getRef }),
+						React.createElement(
+							'label',
+							{ 'for': 'search' },
+							React.createElement(
+								'i',
+								{ className: 'material-icons' },
+								'search'
+							)
+						),
+						React.createElement(
+							'i',
+							{ className: 'material-icons' },
+							'close'
+						)
+					)
+				)
+			);
+		}
+
+	});
+
+	module.exports = Search;
+
+/***/ },
+/* 218 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+	var Router = __webpack_require__(159);
+
+	var Graph = React.createClass({
+		displayName: 'Graph',
+
+		render: function render() {
+
+			var graphStyle = {
+
+				width: '600px',
+				height: '400px',
+				border: '1px solid lightgray'
+
+			};
+
+			return React.createElement(
+				'div',
+				null,
+				React.createElement(
+					'h1',
+					null,
+					'Graph'
+				),
+				React.createElement('div', { style: graphStyle, id: 'mynetwork' })
+			);
+		}
+
+	});
+
+	module.exports = Graph;
 
 /***/ }
 /******/ ]);
