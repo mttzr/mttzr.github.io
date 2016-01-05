@@ -1,7 +1,6 @@
 var React = require('react');
 var Router = require('react-router');
 var Person = require('./Person/Person');
-// var helpers = require('../utils/helpers');
 var ReactFireMixin = require('reactfire');
 var Firebase = require('firebase');
 
@@ -11,51 +10,39 @@ var Profile = React.createClass({
 
   getInitialState: function(){
     return{
-      person:[1,2,3]
+      person:{}
     }
   },
 
   componentDidMount: function(){
     this.ref = new Firebase('https://family-graph.firebaseio.com/');
-    console.log(this.props.params.username);
     var childRef = this.ref.child(this.props.params.username);
-    this.bindAsArray(childRef, 'person');
-  
-
-
-  //helpers.getUserInfo(this.props.params.username).then(function(data){
-    //this.setState({
-       // photo: data.photo,
-       // detailTwo: data.detailTwo
-      //})
-
-    //}.bind(this))
+    this.bindAsObject(childRef, 'person');
 
   },
-
-  
 
   componentWillUnmount: function(){
     this.unbind('person');
-
   },
 
-  handleAddNote: function(newNote){
-    // update firebase, with newNote
-    this.ref.child(this.props.params.username).child(this.state.person.length).set(newNote)
+  handleAddPerson: function(newPerson){
+    var ref = new Firebase('https://family-graph.firebaseio.com/');
+    // ref.push(newPerson);
+    var childRef = this.ref.child(this.props.params.username);
+    childRef.set(newPerson)
 
   },
 
   render: function(){
-    
 		return(
           <Person 
               username={this.props.params.username} 
               person={this.state.person} 
-              addNote = {this.handleAddNote} />
+              addPerson = {this.handleAddPerson} />
+
 		)
 	}
-});
+})
 
 module.exports = Profile;
 

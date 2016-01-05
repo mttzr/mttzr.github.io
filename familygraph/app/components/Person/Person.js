@@ -1,13 +1,12 @@
 var React = require('react');
 var PersonData = require('./PersonData');
-var AddNote = require('./AddNote');
+var AddPerson = require('./AddPerson');
 
 
 var Person = React.createClass({
 	propTypes: {
 		username: React.PropTypes.string.isRequired,
-		person: React.PropTypes.array.isRequired,
-		addNote: React.PropTypes.func.isRequired,
+		person: React.PropTypes.object.isRequired,
 	},
 	render: function(){	
 	return(
@@ -22,7 +21,8 @@ var Person = React.createClass({
 				</div>
 			</div>
 		</div>
-		<AddNote username={this.props.username} addNote={this.props.addNote} />
+		<AddPerson addPerson ={this.props.addPerson} />
+
 	</div>	
 		)
 	}

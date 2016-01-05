@@ -16,6 +16,7 @@
 
         ga('create', 'UA-48070892-1', 'auto');
         ga('send', 'pageview');
+
       </script>
       <!--Import vis.js-->
       <script type = "text/javascript" src = "../node_modules/vis/dist/vis.js"></script>
@@ -35,59 +36,6 @@
         $('.modal-trigger').leanModal();
         });
       </script>
-
-<!--Viz Script -->
-
-<script type="text/javascript">
-    // create an array with nodes
-    var nodes = new vis.DataSet([
-        {id: 1, label: 'Matt'},
-        {id: 2, label: 'Trevor'},
-        {id: 3, label: 'Erica'},
-        {id: 4, label: 'Shelly'},
-        {id: 5, label: 'Paul'},
-        {id: 6, label: 'Nancy'},
-        {id: 7, label: 'John'},
-        {id: 8, label: 'Chuck'},
-        {id: 9, label: 'Toto'},
-        {id: 10, label: 'Sandra'},
-        {id: 11, label: 'Staci'}
-
-    ]);
-
-    // create an array with edges
-    var edges = new vis.DataSet([
-        {from: 1, to: 4},
-        {from: 2, to: 4},
-        {from: 3, to: 4},
-        {from: 1, to: 5},
-        {from: 2, to: 5},
-        {from: 3, to: 5},
-        {from: 5, to: 6},
-        {from: 5, to: 7},
-        {from: 4, to: 8},
-        {from: 4, to: 9},
-        {from: 10, to: 8},
-        {from: 10, to: 9},
-        {from: 11, to: 8},
-        {from: 11, to: 9}
-
-    ]);
-
-    // create a network
-    var container = document.getElementById('mynetwork');
-
-    // provide the data in the vis format
-    var data = {
-        nodes: nodes,
-        edges: edges
-    };
-    var options = {};
-
-    // initialize your network!
-    var network = new vis.Network(container, data, options);
-</script>
-
 
     </body>
 

@@ -6,11 +6,11 @@ propTypes: {
 	addNote: React.PropTypes.func.isRequired
 },
 
-setRef: function(ref){
+// setRef: function(ref){
 
-		this.note = ref;
+// 		this.note = ref;
 
-	},
+// 	},
 
 handleSubmit: function(){
 
