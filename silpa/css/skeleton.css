@@ -43,6 +43,12 @@
 
 /* For devices smaller than 500px */
 @media (max-width: 500px) {
+
+   body{
+    font-size: 1.2em; /* currently ems cause chrome bug misinterpreting rems on body element */
+
+  }
+
   #nav.nine.columns{
     margin-top: 10%;
     text-align: center;
@@ -134,6 +140,12 @@ tr{
 
 /* For devices larger than 500px */
 @media (min-width: 500px) {
+
+  body{
+    font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
+
+  }
+
   .container {
     width: 85%;
     padding: 0; }  
@@ -263,7 +275,6 @@ are based on 10px sizing. So basically 1.5rem = 15px :) */
 html {
   font-size: 62.5%; }
 body {
-  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.6;
   font-weight: 400;
   /*font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
