@@ -58,8 +58,8 @@
   }
 
   #title{
-    color:blue;
     margin-top: 10%;
+    font-size: 4.4rem;
   }
 
   .six.columns{
@@ -85,6 +85,45 @@
   #profile_pic{
     display: none;
   }
+
+td {
+
+    overflow-x: auto;
+    display:block;
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+
+}
+
+td img {
+  width:50%;
+  height:auto;
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5px;
+
+}
+
+td button{
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  margin-bottom:25px;
+}
+
+td {
+  border-bottom: none;
+  text-align: center;
+}
+
+hr{
+    margin-bottom: 0rem;
+    margin-top: 1.5rem;
+
+}
 
 }
 
@@ -125,6 +164,23 @@
   #bio{
     width:300px;
     height:auto;
+  }
+
+  td{
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #E1E1E1; 
+  }
+
+  hr{
+
+    margin-top: 3rem;
+    margin-bottom: 3.5rem;
+
+  }
+
+  #title{
+    font-size: 4rem;
   }
 
 }
@@ -405,10 +461,6 @@ pre > code {
 /* Tables
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 th,
-td {
-  padding: 12px 15px;
-  text-align: left;
-  border-bottom: 1px solid #E1E1E1; }
 th:first-child,
 td:first-child {
   padding-left: 0; }
@@ -456,8 +508,6 @@ form {
 /* Misc
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 hr {
-  margin-top: 3rem;
-  margin-bottom: 3.5rem;
   border-width: 0;
   border-top: 1px solid #E1E1E1; }
 
