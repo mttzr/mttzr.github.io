@@ -102,7 +102,8 @@ td img {
   display:block;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
+  margin-top: 20px;
 
 }
 
@@ -110,8 +111,7 @@ td button{
   display:block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 5px;
-  margin-bottom:25px;
+  margin-top: 20px;
 }
 
 td {
@@ -123,6 +123,11 @@ hr{
     margin-bottom: 0rem;
     margin-top: 1.5rem;
 
+}
+
+tr{
+
+  border-bottom: 1px solid #E1E1E1; 
 }
 
 }
