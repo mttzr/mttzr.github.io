@@ -10,15 +10,17 @@ var graphStyle = {
 
 	};
 
+var fdata = {};	
+
 var Graph = React.createClass({
 
 componentDidMount: function() {
 
 	var ref = new Firebase('https://family-graph.firebaseio.com/');
-	var fdata = {};
+//	var fdata = {};
 	ref.once("value", function(snapshot){
 
-		var fdata = snapshot.val();
+		fdata = snapshot.val();
 
 		return fdata;
 
@@ -42,14 +44,14 @@ componentDidMount: function() {
 	
 	//console.log(nodesNew);
 
-	//console.log(nodesNewResult);
+	console.log(nodesNewResult);
 /*
 	create a variable that is an array of objects, id to edges for each object in data
 	for each object in data
 	for each edge in edges
 	add to variable userid, edge	
 
-*/
+/*
 
 	// create an array with nodes
 	var nodes = new vis.DataSet([
@@ -83,7 +85,7 @@ componentDidMount: function() {
 	    {from: 11, to: 8},
 	    {from: 11, to: 9}
 	]);
-
+*/
 // // create a network
 	var container = document.getElementById('mynetwork');
 

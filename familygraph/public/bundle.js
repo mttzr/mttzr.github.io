@@ -24292,16 +24292,18 @@
 
 	};
 
+	var fdata = {};
+
 	var Graph = React.createClass({
 		displayName: 'Graph',
 
 		componentDidMount: function componentDidMount() {
 
 			var ref = new Firebase('https://family-graph.firebaseio.com/');
-			var fdata = {};
+			//	var fdata = {};
 			ref.once("value", function (snapshot) {
 
-				var fdata = snapshot.val();
+				fdata = snapshot.val();
 
 				return fdata;
 			});
@@ -24321,21 +24323,48 @@
 
 			//console.log(nodesNew);
 
-			//console.log(nodesNewResult);
+			console.log(nodesNewResult);
 			/*
 	  	create a variable that is an array of objects, id to edges for each object in data
 	  	for each object in data
 	  	for each edge in edges
 	  	add to variable userid, edge	
 	  
+	  /*
+	  
+	  	// create an array with nodes
+	  	var nodes = new vis.DataSet([
+	  	    {id: 1, label: 'Matt'},
+	  	    {id: 2, label: 'Trevor'},
+	  	    {id: 3, label: 'Erica'},
+	  	    {id: 4, label: 'Shelly'},
+	  	    {id: 5, label: 'Paul'},
+	  	    {id: 6, label: 'Nancy'},
+	  	    {id: 7, label: 'John'},
+	  	    {id: 8, label: 'Chuck'},
+	  	    {id: 9, label: 'Toto'},
+	  	    {id: 10, label: 'Sandra'},
+	  	    {id: 11, label: 'Staci'}
+	  	    ]);
+	  
+	  // // create an array with edges
+	  	var edges = new vis.DataSet([
+	  	    {from: 1, to: 4},
+	  	    {from: 2, to: 4},
+	  	    {from: 3, to: 4},
+	  	    {from: 1, to: 5},
+	  	    {from: 2, to: 5},
+	  	    {from: 3, to: 5},
+	  	    {from: 5, to: 6},
+	  	    {from: 5, to: 7},
+	  	    {from: 4, to: 8},
+	  	    {from: 4, to: 9},
+	  	    {from: 10, to: 8},
+	  	    {from: 10, to: 9},
+	  	    {from: 11, to: 8},
+	  	    {from: 11, to: 9}
+	  	]);
 	  */
-
-			// create an array with nodes
-			var nodes = new vis.DataSet([{ id: 1, label: 'Matt' }, { id: 2, label: 'Trevor' }, { id: 3, label: 'Erica' }, { id: 4, label: 'Shelly' }, { id: 5, label: 'Paul' }, { id: 6, label: 'Nancy' }, { id: 7, label: 'John' }, { id: 8, label: 'Chuck' }, { id: 9, label: 'Toto' }, { id: 10, label: 'Sandra' }, { id: 11, label: 'Staci' }]);
-
-			// // create an array with edges
-			var edges = new vis.DataSet([{ from: 1, to: 4 }, { from: 2, to: 4 }, { from: 3, to: 4 }, { from: 1, to: 5 }, { from: 2, to: 5 }, { from: 3, to: 5 }, { from: 5, to: 6 }, { from: 5, to: 7 }, { from: 4, to: 8 }, { from: 4, to: 9 }, { from: 10, to: 8 }, { from: 10, to: 9 }, { from: 11, to: 8 }, { from: 11, to: 9 }]);
-
 			// // create a network
 			var container = document.getElementById('mynetwork');
 
