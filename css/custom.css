@@ -1,0 +1,118 @@
+
+/* Default (mobile)
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+h1, h2, h3, h4, p, a{
+	 /* font-family: 'Noto Sans', sans-serif; */
+    font-family: 'Droid Sans', sans-serif;
+    /* font-family: 'Catamaran', sans-serif; */
+}
+
+#content-box {
+	background:black;
+	padding-top: 10px;
+}
+
+#title-name {
+	text-align: center;
+	color:white;
+
+}
+
+#subtitle {
+	text-align: center;
+	color:white;
+}
+
+ul.contact-image {
+	text-align: center
+}
+
+ul.contact-image li {
+	display: inline-block;
+}
+
+ul.contact-image li img {
+
+	height: auto;
+	width: 40px;
+	margin-right: 10px;
+	margin-left: 10px;
+
+}
+
+
+/* Tab Menu
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* Style the list */
+ul.tab {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+    border: solid;
+    border-color: black;
+}
+
+/* Float the list items side by side */
+ul.tab li {
+	display:inline-block;
+}
+
+/* Style the links inside the list items */
+ul.tab li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+/* Change background color of links on hover */
+ul.tab li a:hover {text-decoration: underline;}
+
+/* Create an active/current tablink class */
+ul.tab li a:focus, .active {text-decoration: underline;}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 3px solid black;
+    border-top: none;
+    color:white;
+}
+
+
+
+/* Desktop + Tablet
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media (min-width: 550px) {
+	#content-box{
+		margin-top: 5%
+	}
+}
+
+
+/* Desktop + Tablet
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media (min-width: 750px) {
+	#content-box {
+	margin-top: 10%;
+	min-width: 350px;
+	max-width: 400px;
+	}
+
+	ul.contact-image li img{
+
+	height: auto;
+	width: 60px;
+	margin-right: 10px;
+	margin-left: 10px;
+	}
+}
+
+
