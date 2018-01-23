@@ -119,6 +119,6 @@ function moveDown()
 function scroll()
 {
 	init();
-	setInterval(refresh,1000);
+	setInterval(refresh,500);
 
 }
