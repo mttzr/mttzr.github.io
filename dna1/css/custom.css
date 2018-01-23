@@ -1,0 +1,88 @@
+#main-container {
+	height: 100vh;
+	max-width: 100%;
+	margin-left: 0px;
+	margin-right: 0px;
+	width:100vw;
+}
+
+.top-row {
+	margin-top: 5%
+}
+
+.far-left {
+	text-align: right;
+	margin-right: -115px;
+	width:425px;
+}	
+
+.filler-box {
+	min-height: 100px;
+}
+
+
+.fade-outer {
+	position: relative;
+}
+
+.top-fade-inner {
+	background: white;
+	background: linear-gradient(rgba(255,255,255,1), rgba(255,255,255,0));
+	position:absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height:100%;
+}
+
+.bottom-fade-inner {
+	background: white;
+	background: linear-gradient(rgba(255,255,255,0), rgba(255,255,255,1));
+	position:absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height:100%;
+}
+
+#nucleotides {
+	text-align: center;
+	margin-right: -115px;
+	width: 179px;
+}
+
+#nucleotides-right {
+	width: 179px;
+
+}
+
+#G {
+	color: #04E58B;
+}
+
+#A {
+	color: #E51A16;
+}
+
+#T {
+	color: #006EE5;
+}
+
+#C {
+	color: #FFF300;
+}
+
+.blurb {
+	color: #A0A0A0;
+	width: 227px;
+
+}
+
+
+.inner{
+    position:relative;
+    top:0px;
+}
+.outer{
+    overflow:hidden;
+}
