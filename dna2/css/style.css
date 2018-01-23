@@ -199,6 +199,15 @@
 	.desk-only {
 		display:block;
 	}
+
+	.nuc-top{
+		margin-top: 30px;
+    	margin-bottom: -30px;
+	}
+
+	.nuc-bottom{
+		height: 65px;
+	}
 }
 
 /* Base Styles

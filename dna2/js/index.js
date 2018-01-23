@@ -70,7 +70,8 @@ function init() {
 
 	var itr = 0;
 
-	while(itr < 8) {
+	while (itr < 8)
+	{
 		var current = document.getElementById(elArray[itr]);
 		var newSpan = randomBp();
 		current.appendChild(newSpan);
@@ -87,7 +88,8 @@ function refresh() {
 
 	var itr = 0;
 
-	while(itr < 8) {
+	while (itr < 8)
+	{
 		var current = document.getElementById(elArray[itr]);
 		var child = current.childNodes[0];
 		current.removeChild(child);
@@ -101,8 +103,22 @@ function refresh() {
 	}
 }
 
+function moveDown()
+{
+	var elArray = ['bp1','bp2','bp3','bp4','bp5','bp6','bp7','bp8'];
+	var itr = 8;
+
+	while (itr < 8)
+	{
+		var current = document.getElementById(elArray[itr]);
+		var previous = document.getElementById(elArray[itr]);
+	}
+
+}
+
 function scroll()
 {
 	init();
 	setInterval(refresh,1000);
+
 }
