@@ -75,11 +75,6 @@ function init() {
 		console.log(data);
 	});
 
-	data.forEach(function(d)
-	{
-		d.
-	}
-
 	var elArray = ['bp1','bp2','bp3','bp4','bp5','bp6','bp7','bp8'];
 
 	var itr = 0;
