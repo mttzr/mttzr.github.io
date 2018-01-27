@@ -64,7 +64,21 @@ function randomBp()
 }
 
 
+function nextBp()
+{
+
+}
+
 function init() {
+
+	d3.csv("./SNPs.txt", function(data){
+		console.log(data);
+	});
+
+	data.forEach(function(d)
+	{
+		d.
+	}
 
 	var elArray = ['bp1','bp2','bp3','bp4','bp5','bp6','bp7','bp8'];
 
@@ -106,45 +120,47 @@ function refresh() {
 function moveDown()
 {
 	var elArray = ['bp1','bp2','bp3','bp4','bp5','bp6','bp7','bp8'];
-	var itr = 7;
 
-	while (itr > 1)
+	var zero = document.getElementById(elArray[0]);
+	var one = document.getElementById(elArray[1]);
+	var two = document.getElementById(elArray[2]);
+	var three = document.getElementById(elArray[3]);
+	var four = document.getElementById(elArray[4]);
+	var five = document.getElementById(elArray[5]);
+	var six = document.getElementById(elArray[6]);
+	var seven = document.getElementById(elArray[7]);
+
+	seven.innerHTML = six.innerHTML;
+	six.innerHTML = five.innerHTML;
+	five.innerHTML = four.innerHTML;
+	four.innerHTML = three.innerHTML;
+	three.innerHTML = two.innerHTML;
+	two.innerHTML = one.innerHTML;
+	one.innerHTML = zero.innerHTML;
+	while(zero.firstChild)
 	{
-		var current = document.getElementById(elArray[itr]);
-		var currentChild1 = current.childNodes[0];
-		current.removeChild(currentChild1);
-		var currentChild2 = current.childNodes[0];
-		current.removeChild(currentChild2);
-		var previous = document.getElementById(elArray[itr-1]);
-		console.log(previous);
-		var previousChild1 = previous.childNodes[0];
-		previous.removeChild(previousChild1);
-		var previousChild2 = previous.childNodes[0];
-		previous.removeChild(previousChild2);
-
-		while (current.firstChild)
-		{
-			current.removeChild(current.firstChild);
-		}
-
-		current.appendChild(previousChild1);
-		current.appendChild(previousChild2)
-		itr-1;
+		zero.removeChild(zero.firstChild);
 	}
-	if (itr == 0)
-	{
-		var current = document.getElementById(elArray[itr]);
-		var newSpan = randomBp();
-		current.appendChild(newSpan);
-		var newSpan = randomBp();
-		current.appendChild(newSpan);	
-	}
+	var newSpan = randomBp();
+	zero.appendChild(newSpan);
+	var newSpan = randomBp();
+	zero.appendChild(newSpan);
 
+	var zero = document.getElementById(elArray[0]);
+	return zero;
 }
 
 function scroll()
 {
 	init();
-	setInterval(refresh,500);
+	var scrollRate = 500;
+	var a = setInterval(moveDown,scrollRate);
+	setTimeout(function() {
+		console.log('changing time');
+		scrollRate = 4000;
+		clearInterval(a);
+		var b = setInterval(moveDown, 500);
+	}, 2000); 
+
 
 }

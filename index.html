@@ -6,18 +6,8 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   <title>Matthew Zehnder</title>
-  <meta name="description" content="Matthew Zehnder's personal site">
-  <meta name="author" content="Matthew Zehnder">
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-48070892-1', 'auto');
-  ga('send', 'pageview');
-
-  </script>
+  <meta name="description" content="">
+  <meta name="author" content="">
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -25,42 +15,93 @@
 
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Cousine:400,700" rel="stylesheet">
+
+
+<!-- JS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/style.css"
+
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/cat-grey.png">
+  <link rel="icon" type="image/png" href="images/favicon.png">
 
 </head>
-<body bgcolor="#f5faff">
+<body onload="scroll();">
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <div class="row">
-      <div class="twelve columns" style="margin-top: 10%;">
-        <h3 style="display:inline-block;">Matthew Zehnder</h3>
+<div class="container">
+  <div class="column M">
+    <div class="row top">
+    </div>
+    <div class="row middle cell-M">
+      <h1>M</h1>
+    </div>
+    <div class="row bottom">
+    </div>
+  </div>
+  <div class="column nucleotide">
+    <div class="row top desk-only nuc-top">
+      <div class= fade-outer>
+        <h1 id="bp1"></h1>
+        <h1 id="bp2"></h1>
+        <h1 id="bp3"></h1>
+        <h1 id="bp4"></h1>
+        <div class="fade-inner-top">
+        </div>
       </div>
     </div>
-    <div class = "row">
-      <div class = "twelve colums">
-        <img src="images/selfie.png" style="max-width:100%;">
+    <div class="row middle nuc-bottom">
+      <h1 id="bp5"></h1>
+    </div>
+    <div class="row bottom desk-only">
+      <div class= fade-outer>
+        <h1 id="bp6"></h1>
+        <h1 id="bp7"></h1>
+        <h1 id="bp8"></h1>
+        <div class="fade-inner-bottom">
+        </div>
       </div>
-    <div class = "row">
-      <div class = "twelve colums" style="margin-top: 5%">
-        <h5>about me</h5>
-        <p>I am currently the product manager for <a href="https://eng.uber.com/engineering-an-efficient-route/">routing</a> at <a href="https://m.uber.com/">Uber</a>, finding paths to move people, food, freight, and robots from &#127344; to &#127345;. Previously, I was a product manager at Google where I worked on <a href ="https://www.theguardian.com/technology/2014/oct/13/google-doctor-video-chat-symptoms-search">search</a>. I grew up in NorCal, studied at Harvard, and in my spare time I like to surf, code, and hang out with this cool <a href=https://www.instagram.com/p/BTZaPoBFeq1/?taken-by=matty.__.z>cat</a>. 
-        </p>
-        <h5>about this site</h5>
-        <p> I host this site on <a href="https://pages.github.com/">github pages</a>. It was built using <a href="http://getskeleton.com/"> skeleton </a>. The favicon is by <a href= "https://thenounproject.com/ornob/">Ornob Sikder</a> and me.  </p>
-        <h5>getting in touch</h5>
-        <p>I love new friends, email me at hello@ this site.</p>
-      </div>
+    </div>
+  </div>
+  <div class="column THEW">
+    <div class="row top">
+    </div>
+    <div class="row middle cell-THEW">
+      <h1>THEW</h1>
+    </div>
+    <div class="row bottom">
+    </div>
+  </div>
+    <div class="column space">
+    <div class="row top">
+    </div>
+    <div class="row middle">
+    </div>
+    <div class="row bottom">
+    </div>
+  </div>
+  <div class="column ZEHNDER">
+    <div class="row top">
+    </div>
+    <div class="row middle cell-ZEHNDER">
+      <h1>ZEHNDER</h1>
+    </div>
+    <div class="row bottom">
+      <p class="blurb">Currently building software at <strong><a href="https://grail.com/">GRAIL</a></strong> to detect cancer early, when it can be cured.
+      <br><br>Previously, led the <a href="https://eng.uber.com/engineering-an-efficient-route/">routing team</a> at UBER and improved access to <a href= "https://www.theguardian.com/technology/2014/oct/13/google-doctor-video-chat-symptoms-search">health information</a> in search results at GOOGLE.
+      <br><br>
+      Yes, those are my <a href="https://en.wikipedia.org/wiki/Single-nucleotide_polymorphism">SNPs</a>
+      <br><br>
+      Say <a href="mailto:hello@matthewzehnder.com?Subject=Hello">hello</a>.
+      </p>
     </div>
   </div>
 </div>
@@ -69,3 +110,4 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 </body>
 </html>
+
