@@ -35,10 +35,8 @@ function createG()
 	return newSpan;
 }
 
-
 function randomBp() 
 {
-
 	var randomNum = Math.floor(Math.random() * 4) + 1;
 
 	if (randomNum == 1)
@@ -60,25 +58,17 @@ function randomBp()
 		{
 			newSpan = createG();
 		}
+		
 	return newSpan;
 }
 
-
-function nextBp()
+function init()
 {
-
-}
-
-function init() {
-
 	d3.csv("./SNPs.txt", function(data){
 		console.log(data);
 	});
-
 	var elArray = ['bp1','bp2','bp3','bp4','bp5','bp6','bp7','bp8'];
-
 	var itr = 0;
-
 	while (itr < 8)
 	{
 		var current = document.getElementById(elArray[itr]);
@@ -91,12 +81,10 @@ function init() {
 }
 
 
-function refresh() {
-
+function refresh()
+{
 	var elArray = ['bp1','bp2','bp3','bp4','bp5','bp6','bp7','bp8'];
-
 	var itr = 0;
-
 	while (itr < 8)
 	{
 		var current = document.getElementById(elArray[itr]);
@@ -156,6 +144,4 @@ function scroll()
 		clearInterval(a);
 		var b = setInterval(moveDown, 500);
 	}, 2000); 
-
-
 }

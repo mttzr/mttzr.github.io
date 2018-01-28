@@ -51,7 +51,7 @@
 }
 
 .cell-M {
-	margin-left: 17px;
+	margin-left: 15px;
 	margin-right: 2px;
 
 }
@@ -60,14 +60,15 @@
 }
 
 .cell-ZEHNDER {
-	text-align: center;
+	text-align: left;
+	margin-left: 13px;
 
 }
 
 .blurb {
 	width:270px;
 	color:#A0A0A0;
-	padding-left: 12px;
+	padding-left: 16px;
 }
 
 .desk-only {
@@ -165,6 +166,7 @@
 
 	.cell-ZEHNDER {
 		text-align: left;
+		margin-left: 0px;
 
 	}
 
