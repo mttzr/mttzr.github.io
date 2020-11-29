@@ -4,6 +4,19 @@ function getRandomInt(max) {
 
 logo = getRandomInt(15)
 
+class FavIconComponent extends HTMLElement {
+
+	connectedCallback(){
+		this.innerHTML = '\
+		<link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">\
+		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">\
+		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">\
+		<link rel="manifest" href="images/favicon_io/site.webmanifest">';
+	}
+}
+
+customElements.define('favicon-component', FavIconComponent);
+
 class NavComponent extends HTMLElement {
 
 	connectedCallback(){
@@ -25,11 +38,6 @@ class NavComponent extends HTMLElement {
 
 customElements.define('nav-component', NavComponent);
 
-const article = document.querySelector('#electric-cars');
-
-console.log("hey")
-
-console.log(article)
 
 /*
 Add new pages later
