@@ -4,24 +4,6 @@ function getRandomInt(max) {
 
 logo = getRandomInt(15)
 
-class GoogleAnalyticsComponenet extends HTMLElement {
-
-	connectedCallback(){
-		this.innerHTML = '\
-			<!-- Global site tag (gtag.js) - Google Analytics -->\
-			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-48070892-1"></script>\
-			<script>\
-	  		window.dataLayer = window.dataLayer || [];\
-	  		function gtag(){dataLayer.push(arguments);}\
-	  		gtag('js', new Date());\
-	  		gtag('config', 'UA-48070892-1');\
-			</script>\
-			'
-	}
-}
-
-customElements.define('ga-component', GoogleAnalyticsComponenet);
-
 class FavIconComponent extends HTMLElement {
 
 	connectedCallback(){
