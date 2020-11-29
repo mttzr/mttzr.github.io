@@ -2,7 +2,7 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
 
-logo = getRandomInt(14)
+logo = getRandomInt(15)
 
 class NavComponent extends HTMLElement {
 
