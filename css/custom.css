@@ -5,7 +5,7 @@ body{
   --link-color-red: red;
   --white-bg: #fff;
   --grey-bg: #f0f0f0;
-  --timeline-color: #000;
+  --timeline-color: #444;
   color: var(--text-color);
   margin: 0;
   display: flex;
@@ -58,7 +58,7 @@ p:last-child{
 
 .timeline{
   display: grid;
-  border-left: solid 2px;
+  border-left: solid 2px var(--timeline-color);
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
