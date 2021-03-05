@@ -24,7 +24,7 @@ class NavComponent extends HTMLElement {
 		<div class="container"> \
     		<div class="row" style="margin-top: 5%">\
       			<div class="six columns">\
-        		<img class="logo" src="./images/Return to Zehnder-'+logo+'.png">\
+        		<a href="index.html"><img class="logo" src="./images/Return to Zehnder-'+logo+'.png"></a>\
       			</div>\
       			<div class="six columns nav__links">\
 		        <a href="index.html" class = "nav__link hvr-grow">home</a>\
