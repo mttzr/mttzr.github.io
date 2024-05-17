@@ -2,10 +2,10 @@ class FavIconComponent extends HTMLElement {
 
 	connectedCallback(){
 		this.innerHTML = '\
-		<link rel="apple-touch-icon" sizes="180x180" href="images/favicon_io/apple-touch-icon.png">\
-		<link rel="icon" type="image/png" sizes="32x32" href="images/favicon_io/favicon-32x32.png">\
-		<link rel="icon" type="image/png" sizes="16x16" href="images/favicon_io/favicon-16x16.png">\
-		<link rel="manifest" href="images/favicon_io/site.webmanifest">';
+		<link rel="apple-touch-icon" sizes="180x180" href="https://www.returntozehnder.com/images/favicon_io/apple-touch-icon.png">\
+		<link rel="icon" type="image/png" sizes="32x32" href="https://www.returntozehnder.com/images/favicon_io/favicon-32x32.png">\
+		<link rel="icon" type="image/png" sizes="16x16" href="https://www.returntozehnder.com/images/favicon_io/favicon-16x16.png">\
+		<link rel="manifest" href="https://www.returntozehnder.com/images/favicon_io/site.webmanifest">';
 	}
 }
 
@@ -18,12 +18,12 @@ class NavComponent extends HTMLElement {
 		<div class="container"> \
     		<div class="row" style="margin-top: 5%">\
       			<div class="six columns">\
-        		<a href="index.html"><img class="logo" src="./images/return_to_zehnder.png"></a>\
+        		<a href="https://www.returntozehnder.com/index.html"><img class="logo" src="https://www.returntozehnder.com/images/return_to_zehnder.png"></a>\
       			</div>\
       			<div class="six columns nav__links">\
-		        <a href="about.html" class = "nav__link hvr-grow">about</a>\
-		        <a href="contact.html" class = "nav__link hvr-grow">contact</a>\
-				<a href="blog.html" class = nav__link hvr-grow">blog</a>\
+		        <a href="https://www.returntozehnder.com/about.html" class = "nav__link hvr-grow">about</a>\
+		        <a href="https://www.returntozehnder.com/contact.html" class = "nav__link hvr-grow">contact</a>\
+				<a href="https://www.returntozehnder.com/blog.html" class = nav__link hvr-grow">blog</a>\
       			</div>\
     		</div>\
  	 	</div>';
