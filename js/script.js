@@ -23,7 +23,7 @@ class NavComponent extends HTMLElement {
       			<div class="six columns nav__links">\
 		        <a href="about.html" class = "nav__link hvr-grow">about</a>\
 		        <a href="contact.html" class = "nav__link hvr-grow">contact</a>\
-			<a href="blog.html" class = nav__link hvr-grow">blog</a>\
+				<a href="blog.html" class = nav__link hvr-grow">blog</a>\
       			</div>\
     		</div>\
  	 	</div>';
