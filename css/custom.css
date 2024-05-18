@@ -54,13 +54,16 @@ p:last-child{
 
 .nav__links{
   text-align: right;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 .nav__link{
   color: var(--text-color);
   text-decoration: none;
-  display: inline; 
   margin-right:10px;
+  
 }
 
 .nav__link:hover{
