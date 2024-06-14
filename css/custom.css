@@ -37,6 +37,11 @@ p:last-child{
   width:75%;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .better-o{
   width: 20px;
   vertical-align: middle;
