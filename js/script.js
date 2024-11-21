@@ -21,14 +21,18 @@ class NavComponent extends HTMLElement {
         		<a href="https://www.returntozehnder.com/index.html"><img class="logo" src="https://www.returntozehnder.com/images/return_to_zehnder.png"></a>\
       			</div>\
       			<div class="six columns nav__links">\
-		        <a href="https://www.returntozehnder.com/about.html" class = "nav__link hvr-grow">about</a>\
 		        <a href="https://www.returntozehnder.com/contact.html" class = "nav__link hvr-grow">contact</a>\
-				<a href="https://www.returntozehnder.com/writing.html" class = nav__link hvr-grow">writing</a>\
       			</div>\
     		</div>\
  	 	</div>';
 	}
 }
+
+/*ADD BACK LATER
+		        <a href="https://www.returntozehnder.com/about.html" class = "nav__link hvr-grow">about</a>\
+				<a href="https://www.returntozehnder.com/writing.html" class = nav__link hvr-grow">writing</a>\
+*/
+
 
 customElements.define('nav-component', NavComponent);
 /*
